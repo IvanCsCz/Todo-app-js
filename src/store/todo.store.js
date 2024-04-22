@@ -55,7 +55,7 @@ const toggleTodo = ( todoId ) => {
 const deleteTodo = ( todoId ) => {
     if ( !todoId ) throw new Error('todoId is required');
 
-    state.todos = state.todos.filter( todo.id === todoId );
+    state.todos = state.todos.filter( todo => todo.id !== todoId );
 }
 
 const deleteCompleted = () => {
